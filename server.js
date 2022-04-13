@@ -26,13 +26,9 @@ app.get("/projects", (req, res) => {
 
     res.json(projects)
   } else {
-    res.status(400).json("Enter a valid language... en / es")
+    res.status(400).json({ error: "Enter a valid language... en / es" })
   }
-  
 })
-
-
-app.get("presentation")
 
 
 app.listen(port, () => {
